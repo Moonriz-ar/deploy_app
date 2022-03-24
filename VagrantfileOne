@@ -7,12 +7,12 @@
 # you're doing.
 Vagrant.configure("2") do |config|
   config.vm.define "server" do |server|
-  config.vm.box = "debian/trusty"
+  config.vm.box = "ubuntu/trusty"
   server.vm.hostname = "server"
   server.vm.network "public_network"
   end
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "4096"
-    vb.gui = false
+    vb.memory = "2048"
+    vb.gui = true
   end
 end
